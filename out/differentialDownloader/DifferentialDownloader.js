@@ -246,6 +246,8 @@ class DifferentialDownloader {
 
         if (debug != null) {
           debug(`download range: ${range}`);
+          var dlSize = operation.end - operation.start - 1;
+          this.logger.info('downloadingBytes: ' + dlSize);
         }
 
         const request = this.httpExecutor.createRequest(requestOptions, response => {
