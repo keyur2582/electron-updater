@@ -75,6 +75,7 @@ class DifferentialDownloader {
     this.options = options;
     this.fileMetadataBuffer = null;
     this.logger = options.logger;
+    this.lastLoggedTime = null;
   }
 
   createRequestOptions() {
@@ -121,9 +122,11 @@ class DifferentialDownloader {
       throw new Error(`Internal error, size mismatch: downloadSize: ${downloadSize}, copySize: ${copySize}, newSize: ${newSize}`);
     }
 
-    logger.info(`Full: ${formatBytes(newSize)}, To download: ${formatBytes(downloadSize)} (${Math.round(downloadSize / (newSize / 100))}%)`);
-    logger.info(`fullSize: ${newSize}`);
-    logger.info(`downloadSize: ${downloadSize}`);
+    if (this.lastLoggedTime == null || Math.abs((this.lastLoggedTime - new Date()) / 1000) >= 3) {
+      logger.info(`Full: ${formatBytes(newSize)}, To download: ${formatBytes(downloadSize)} (${Math.round(downloadSize / (newSize / 100))}%)`);
+      logger.info(`fullSize: ${newSize}`);
+      logger.info(`downloadSize: ${downloadSize}`);
+    }
 
     return this.downloadFile(operations);
   }
@@ -326,6 +329,6 @@ function formatBytes(value, symbol = " KB") {
 function removeQuery(url) {
   const index = url.indexOf("?");
   return index < 0 ? url : url.substring(0, index);
-} 
+}
 // __ts-babel@6.0.4
 //# sourceMappingURL=DifferentialDownloader.js.map
