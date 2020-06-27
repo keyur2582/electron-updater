@@ -1,32 +1,68 @@
 {
-  "name": "electron-updater",
-  "version": "4.2.0",
+  "_from": "electron-updater@latest",
+  "_id": "electron-updater@4.3.1",
+  "_inBundle": false,
+  "_integrity": "sha512-UDC5AHCgeiHJYDYWZG/rsl1vdAFKqI/Lm7whN57LKAk8EfhTewhcEHzheRcncLgikMcQL8gFo1KeX51tf5a5Wg==",
+  "_location": "/electron-updater",
+  "_phantomChildren": {
+    "at-least-node": "1.0.0",
+    "graceful-fs": "4.2.4"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "electron-updater@latest",
+    "name": "electron-updater",
+    "escapedName": "electron-updater",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/electron-updater/-/electron-updater-4.3.1.tgz",
+  "_shasum": "9d485b6262bc56fcf7ee62b1dc1b3b105a3e96a7",
+  "_spec": "electron-updater@latest",
+  "_where": "D:\\Projects\\1_Studio\\Dependencies\\2_Motion_Updater",
+  "author": {
+    "name": "Vladimir Krivosheev"
+  },
+  "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@types/semver": "^7.1.0",
+    "builder-util-runtime": "8.7.0",
+    "fs-extra": "^9.0.0",
+    "js-yaml": "^3.13.1",
+    "lazy-val": "^1.0.4",
+    "lodash.isequal": "^4.5.0",
+    "semver": "^7.1.3"
+  },
+  "deprecated": false,
   "description": "Cross platform updater for electron applications",
-  "main": "out/main.js",
-  "author": "Vladimir Krivosheev",
-  "license": "MIT",
-  "repository": "electron-userland/electron-builder",
-  "bugs": "https://github.com/electron-userland/electron-builder/issues",
-  "homepage": "https://github.com/electron-userland/electron-builder",
+  "devDependencies": {
+    "@types/fs-extra": "^8.1.0",
+    "@types/js-yaml": "^3.12.3",
+    "@types/lodash.isequal": "^4.5.5"
+  },
   "files": [
     "out"
   ],
-  "dependencies": {
-    "@types/semver": "^6.0.2",
-    "lazy-val": "^1.0.4",
-    "fs-extra": "^8.1.0",
-    "js-yaml": "^3.13.1",
-    "semver": "^6.3.0",
-    "builder-util-runtime": "8.4.0",
-    "lodash.isequal": "^4.5.0",
-    "pako": "^1.0.10"
-  },
-  "typings": "./out/main.d.ts",
+  "homepage": "https://github.com/electron-userland/electron-builder",
+  "license": "MIT",
+  "main": "out/main.js",
+  "name": "electron-updater",
   "publishConfig": {
     "tag": "next"
-  }
-
-,"_resolved": "https://registry.npmjs.org/electron-updater/-/electron-updater-4.2.0.tgz"
-,"_integrity": "sha512-GuS3g7HDh17x/SaFjxjswlWUaKHczksYkV2Xc5CKj/bZH0YCvTSHtOmnBAdAmCk99u/71p3zP8f0jIqDfGcjww=="
-,"_from": "electron-updater@4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron-userland/electron-builder.git"
+  },
+  "typings": "./out/main.d.ts",
+  "version": "4.3.1"
 }

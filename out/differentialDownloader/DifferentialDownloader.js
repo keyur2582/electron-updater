@@ -79,9 +79,9 @@ class DifferentialDownloader {
 
   createRequestOptions() {
     const result = {
-      headers: Object.assign(Object.assign({}, this.options.requestHeaders), {
+      headers: { ...this.options.requestHeaders,
         accept: "*/*"
-      })
+      }
     };
     (0, _builderUtilRuntime().configureRequestUrl)(this.options.newUrl, result); // user-agent, cache-control and other common options
 
@@ -124,7 +124,7 @@ class DifferentialDownloader {
     logger.info(`Full: ${formatBytes(newSize)}, To download: ${formatBytes(downloadSize)} (${Math.round(downloadSize / (newSize / 100))}%)`);
     logger.info(`fullSize: ${newSize}`);
     logger.info(`downloadSize: ${downloadSize}`);
-
+    
     return this.downloadFile(operations);
   }
 
