@@ -269,7 +269,7 @@ class NsisUpdater extends _BaseUpdater().BaseUpdater {
         }
 
         try {
-          return JSON.parse((0, _zlib().inflateSync)(data).toString());
+           return JSON.parse((0, _zlib().gunzipSync)(data).toString());
         } catch (e) {
           throw new Error(`Cannot parse blockmap "${url.href}", error: ${e}, raw data: ${data}`);
         }
